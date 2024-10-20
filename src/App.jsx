@@ -5,6 +5,7 @@ import  {login, logout} from "./store/authSlice"
 import './App.css'
 import { Footer, Header } from './components'
 import {Outlet} from 'react-router-dom'
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -28,6 +29,7 @@ function App() {
         <Header />
         <main>
           <Outlet />
+          <Analytics />
         </main>
         <Footer />
       </div>
